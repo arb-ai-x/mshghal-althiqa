@@ -1,15 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>مشاغل الثقة | الفخامة المطلقة</title>
-    <!-- Google Fonts & Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS Animation CDN (لتحريك العناصر) -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARBIX | أنت مخترق</title>
     <style>
         * {
             margin: 0;
@@ -17,687 +11,1091 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --gold-primary: #D4AF37;
-            --gold-dark: #AA7C2C;
-            --gold-light: #F3E5AB;
-            --black-rich: #050505;
-            --black-surface: #111111;
-            --black-card: #1A1A1A;
-            --gray-lux: #B8B8B8;
-            --transition-smooth: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
         body {
-            background-color: var(--black-rich);
-            color: #EEEEEE;
-            font-family: 'Tajawal', sans-serif;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-
-        /* Custom scrollbar فاخر */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1a1a1a;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--gold-primary);
-            border-radius: 10px;
-        }
-
-        /* أنماط نصية راقية */
-        h1, h2, h3, .luxury-text {
-            font-family: 'Tajawal', sans-serif;
-            letter-spacing: -0.02em;
-        }
-
-        .serif-accent {
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        /* تأثير خلفية حريرية متحركة */
-        .bg-aura {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            background: radial-gradient(circle at 20% 30%, rgba(212,175,55,0.03) 0%, rgba(0,0,0,0) 60%),
-                        radial-gradient(circle at 80% 70%, rgba(170,124,44,0.04) 0%, rgba(0,0,0,0) 70%);
-            pointer-events: none;
-        }
-
-        /* نبضات ذهبية متحركة */
-        .gold-dust {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background-image: radial-gradient(1px 1px at 20% 40%, rgba(212,175,55,0.2) 0%, rgba(0,0,0,0) 100%);
-            background-size: 60px 60px;
-            animation: slowPan 90s linear infinite;
-            opacity: 0.5;
-            pointer-events: none;
-        }
-
-        @keyframes slowPan {
-            0% { background-position: 0 0; }
-            100% { background-position: 200px 200px; }
-        }
-
-        /* ========== HEADER ========== */
-        .hero {
-            min-height: 100vh;
+            background: #000;
+            height: 100vh;
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', 'Arial Black', monospace;
             text-align: center;
-            position: relative;
-            isolation: isolate;
-            background: linear-gradient(125deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 100%), 
-                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            border-bottom: 2px solid var(--gold-primary);
-        }
-
-        .hero-content {
-            max-width: 1000px;
-            padding: 2rem;
-            backdrop-filter: blur(8px);
-            background: rgba(0,0,0,0.4);
-            border-radius: 2px;
-            border-left: 1px solid rgba(212,175,55,0.5);
-            border-right: 1px solid rgba(212,175,55,0.5);
-            animation: fadeUp 1.2s ease-out;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            letter-spacing: 6px;
-            color: var(--gold-light);
-            font-weight: 500;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-        }
-
-        .hero h1 {
-            font-size: clamp(3.5rem, 12vw, 7rem);
-            font-weight: 900;
-            background: linear-gradient(135deg, #FFFFFF 0%, var(--gold-primary) 70%, #E8C97A 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            line-height: 1.1;
-            margin: 0.5rem 0;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-
-        .hero-tag {
-            font-size: 1.1rem;
-            color: var(--gray-lux);
-            margin-top: 1.5rem;
-            border-top: 1px solid rgba(212,175,55,0.4);
-            display: inline-block;
-            padding-top: 1rem;
-        }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* قسم التعريف الفاخر */
-        .intro-luxury {
-            padding: 100px 8%;
-            text-align: center;
-            background: linear-gradient(180deg, var(--black-rich) 0%, #0a0a0a 100%);
-        }
-
-        .intro-luxury p {
-            font-size: 1.5rem;
-            max-width: 900px;
-            margin: 0 auto;
-            font-weight: 300;
-            line-height: 1.8;
-            color: #cfcfcf;
-        }
-
-        .gold-separator {
-            width: 100px;
-            height: 2px;
-            background: var(--gold-primary);
-            margin: 30px auto;
-        }
-
-        /* أقسام الخدمات بتصميم ثلاثي الأبعاد وأيقونات ذهبية */
-        .services {
-            padding: 40px 5% 100px;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 70px;
-        }
-
-        .section-header h2 {
-            font-size: 3rem;
-            font-weight: 800;
-            display: inline-block;
-            position: relative;
-        }
-
-        .section-header h2:before {
-            content: '';
-            position: absolute;
-            width: 40%;
-            height: 3px;
-            background: var(--gold-primary);
-            bottom: -15px;
-            right: 30%;
-        }
-
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-            margin-top: 20px;
-        }
-
-        .service-card {
-            background: var(--black-card);
-            padding: 2.5rem;
-            border-radius: 20px;
-            transition: var(--transition-smooth);
-            border: 1px solid rgba(212,175,55,0.2);
-            backdrop-filter: blur(2px);
+            padding: 20px;
             position: relative;
             overflow: hidden;
-            z-index: 1;
+            cursor: none;
+            user-select: none;
+            animation: bodyShake 0.5s infinite;
         }
 
-        .service-card::after {
-            content: '';
-            position: absolute;
+        @keyframes bodyShake {
+            0%, 100% { transform: translate(0, 0); }
+            10% { transform: translate(-1px, 1px); }
+            20% { transform: translate(1px, -1px); }
+            30% { transform: translate(-1px, -1px); }
+            40% { transform: translate(1px, 1px); }
+            50% { transform: translate(0, 0); }
+            60% { transform: translate(1px, -1px); }
+            70% { transform: translate(-1px, 1px); }
+            80% { transform: translate(1px, 1px); }
+            90% { transform: translate(-1px, -1px); }
+        }
+
+        /* ظلام دامس مع وميض */
+        .darkness {
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(125deg, rgba(212,175,55,0.05) 0%, rgba(0,0,0,0) 80%);
-            z-index: -1;
+            background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.8) 70%);
+            pointer-events: none;
+            z-index: 5;
+            animation: darknessPulse 3s ease-in-out infinite;
         }
 
-        .service-card:hover {
-            transform: translateY(-15px) scale(1.01);
-            border-color: var(--gold-primary);
-            box-shadow: 0 30px 40px -20px rgba(212,175,55,0.3);
+        @keyframes darknessPulse {
+            0%, 100% { background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.8) 70%); }
+            50% { background: radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.95) 60%); }
         }
 
-        .card-icon {
-            font-size: 3.8rem;
-            color: var(--gold-primary);
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover .card-icon {
-            transform: scale(1.1);
-        }
-
-        .service-card h3 {
-            font-size: 1.8rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-
-        .service-card p {
-            color: #aaa;
-            line-height: 1.7;
-        }
-
-        /* قسم العرض التقديمي مع صور بانوراما */
-        .showcase {
-            padding: 80px 5%;
-            background: radial-gradient(circle at 10% 20%, #0F0E0A, #010101);
-            position: relative;
-        }
-
-        .showcase-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
-            margin-top: 40px;
-        }
-
-        .showcase-item {
-            flex: 1;
-            min-width: 260px;
-            background: rgba(0,0,0,0.6);
-            backdrop-filter: blur(12px);
-            border-radius: 28px;
-            padding: 2rem;
-            text-align: center;
-            border: 1px solid rgba(212,175,55,0.3);
-            transition: all 0.4s;
-        }
-
-        .showcase-item i {
-            font-size: 2.8rem;
-            color: var(--gold-primary);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--gold-light);
-            font-family: monospace;
-        }
-
-        /* contact - ذهبية متطورة */
-        .contact-luxury {
-            background: linear-gradient(135deg, #0a0a0a 0%, #141414 100%);
-            padding: 90px 5%;
-            text-align: center;
-            border-top: 1px solid rgba(212,175,55,0.3);
-            border-bottom: 1px solid rgba(212,175,55,0.3);
-            margin: 20px 0;
-        }
-
-        .contact-glow h3 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-
-        .contact-glow .contact-desc {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 40px;
-            color: #c0c0c0;
-        }
-
-        .btn-group-lux {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .btn-master {
-            display: inline-flex;
-            align-items: center;
-            gap: 14px;
-            padding: 18px 45px;
-            font-size: 1.3rem;
-            font-weight: 800;
-            border-radius: 60px;
-            text-decoration: none;
-            transition: 0.3s;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            background: #1f1f1f;
-            color: white;
-            border: 1px solid rgba(212,175,55,0.5);
-        }
-
-        .btn-master i {
-            font-size: 1.6rem;
-        }
-
-        .btn-whatsapp-gold {
-            background: linear-gradient(95deg, #075E54, #128C7E);
-            border: none;
-            box-shadow: 0 12px 20px -10px rgba(37,211,102,0.3);
-        }
-
-        .btn-facebook-gold {
-            background: linear-gradient(95deg, #0e2a47, #1e4b7a);
-            border: none;
-            box-shadow: 0 12px 20px -10px rgba(24,119,242,0.3);
-        }
-
-        .btn-master:hover {
-            transform: scale(1.05);
-            filter: brightness(1.05);
-            letter-spacing: 1px;
-        }
-
-        /* شهادات العملاء (إضافة عنصر ثقة) */
-        .testimonial {
-            padding: 80px 5%;
-            background: #010101;
-        }
-
-        .testimonial-card {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            background: rgba(30,30,30,0.5);
-            padding: 3rem;
-            border-radius: 40px;
-            border: 1px solid rgba(212,175,55,0.2);
-            backdrop-filter: blur(4px);
-        }
-
-        .testimonial-card i {
-            font-size: 3rem;
-            color: var(--gold-primary);
-            opacity: 0.8;
-        }
-
-        .testimonial-text {
-            font-size: 1.4rem;
-            font-weight: 300;
-            margin: 25px 0;
-        }
-
-        /* Footer فاخر مع خريطة مواقع */
-        footer {
-            background: #020202;
-            padding: 60px 20px 40px;
-            text-align: center;
-            border-top: 1px solid #222;
-        }
-
-        .footer-brand {
-            font-size: 2rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #D4AF37, #F9E0A0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: 2px;
-        }
-
-        .footer-links {
-            margin: 25px 0;
-            display: flex;
-            justify-content: center;
-            gap: 35px;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: #aaa;
-            text-decoration: none;
-            transition: 0.2s;
-            font-weight: 500;
-        }
-
-        .footer-links a:hover {
-            color: var(--gold-primary);
-        }
-
-        /* زر السهم لأعلى */
-        .scroll-top {
+        /* عيون في الظلام */
+        .eyes-container {
             position: fixed;
-            bottom: 40px;
-            left: 30px;
-            background: var(--gold-primary);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 4;
+        }
+
+        .eye-pair {
+            position: absolute;
+            animation: eyeFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes eyeFloat {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(10px, -15px); }
+            50% { transform: translate(-5px, -25px); }
+            75% { transform: translate(-15px, -10px); }
+        }
+
+        .eye {
+            width: 12px;
+            height: 16px;
+            background: #ff0000;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 8px;
+            box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000;
+            animation: eyeGlow 1s ease-in-out infinite alternate;
+            position: relative;
+        }
+
+        .eye::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 2px;
+            width: 4px;
+            height: 8px;
+            background: #000;
+            border-radius: 50%;
+            animation: pupilMove 2s ease-in-out infinite;
+        }
+
+        @keyframes eyeGlow {
+            0% { box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000; }
+            100% { box-shadow: 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 120px #ff0000; }
+        }
+
+        @keyframes pupilMove {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(2px, -1px); }
+            50% { transform: translate(-2px, 1px); }
+            75% { transform: translate(1px, 2px); }
+        }
+
+        /* وميض الشاشة السريع */
+        .screen-flicker {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 15;
+            animation: quickFlicker 0.05s infinite;
+            background: transparent;
+        }
+
+        @keyframes quickFlicker {
+            0%, 95%, 100% { background: transparent; }
+            96% { background: rgba(255, 0, 0, 0.08); }
+            97% { background: transparent; }
+            98% { background: rgba(255, 0, 0, 0.12); }
+            99% { background: transparent; }
+        }
+
+        /* مؤشر التصويب */
+        .custom-cursor {
+            position: fixed;
             width: 50px;
             height: 50px;
+            pointer-events: none;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+        }
+
+        .custom-cursor::before {
+            content: '⌖';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            color: #ff0000;
+            animation: cursorPulse 0.5s ease-in-out infinite;
+            text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000;
+        }
+
+        @keyframes cursorPulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+            25% { transform: translate(-50%, -50%) scale(1.2) rotate(5deg); }
+            50% { transform: translate(-50%, -50%) scale(1.4) rotate(0deg); }
+            75% { transform: translate(-50%, -50%) scale(1.2) rotate(-5deg); }
+        }
+
+        .custom-cursor::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 4px;
+            height: 4px;
+            background: #ff0000;
             border-radius: 50%;
+            box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+            animation: cursorDot 0.8s ease-in-out infinite;
+        }
+
+        @keyframes cursorDot {
+            0%, 100% { width: 4px; height: 4px; }
+            50% { width: 8px; height: 8px; }
+        }
+
+        /* خطوط المسح */
+        .scan-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 12;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 3px,
+                rgba(0, 0, 0, 0.3) 3px,
+                rgba(0, 0, 0, 0.3) 6px
+            );
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            animation: containerGlitch 6s infinite;
+        }
+
+        @keyframes containerGlitch {
+            0%, 88%, 100% { transform: translate(0); filter: none; }
+            89% { transform: translate(-15px, 8px); filter: hue-rotate(90deg) brightness(1.5); }
+            90% { transform: translate(15px, -8px); filter: hue-rotate(-90deg) brightness(0.5); }
+            91% { transform: translate(-8px, -5px); filter: none; }
+            92% { transform: translate(8px, 5px); filter: hue-rotate(180deg); }
+            93% { transform: translate(0); filter: none; }
+        }
+
+        .box {
+            position: relative;
+            background: rgba(0, 0, 0, 0.92);
+            padding: 40px 60px;
+            border: 2px solid #330000;
+            box-shadow: 
+                0 0 40px rgba(255, 0, 0, 0.4),
+                0 0 80px rgba(255, 0, 0, 0.2),
+                inset 0 0 40px rgba(255, 0, 0, 0.08);
+            max-width: 800px;
+            width: 100%;
+            animation: boxPulse 3s ease-in-out infinite;
+            clip-path: polygon(
+                0% 3%, 3% 0%, 97% 0%, 100% 3%, 
+                100% 97%, 97% 100%, 3% 100%, 0% 97%
+            );
+        }
+
+        @keyframes boxPulse {
+            0%, 100% { 
+                box-shadow: 0 0 40px rgba(255, 0, 0, 0.4), 0 0 80px rgba(255, 0, 0, 0.2), inset 0 0 40px rgba(255, 0, 0, 0.08);
+                border-color: #330000;
+            }
+            50% { 
+                box-shadow: 0 0 60px rgba(255, 0, 0, 0.6), 0 0 120px rgba(255, 0, 0, 0.3), inset 0 0 60px rgba(255, 0, 0, 0.15);
+                border-color: #660000;
+            }
+        }
+
+        /* ختم محظور */
+        .restricted-stamp {
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            font-size: 70px;
+            opacity: 0.15;
+            pointer-events: none;
+            animation: stampRotate 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes stampRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .skull-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .skull-icon {
+            font-size: 140px;
+            display: block;
+            margin-bottom: 10px;
+            animation: skullHorror 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px rgba(255, 0, 0, 0.9)) 
+                    drop-shadow(0 0 60px rgba(255, 0, 0, 0.6)) 
+                    drop-shadow(0 0 100px rgba(255, 0, 0, 0.4))
+                    drop-shadow(0 0 150px rgba(255, 0, 0, 0.2));
+        }
+
+        @keyframes skullHorror {
+            0%, 100% { 
+                transform: translateY(0) scale(1);
+                filter: drop-shadow(0 0 30px rgba(255, 0, 0, 0.9)) drop-shadow(0 0 60px rgba(255, 0, 0, 0.6));
+            }
+            30% { 
+                transform: translateY(-15px) scale(1.1);
+                filter: drop-shadow(0 0 50px rgba(255, 0, 0, 1)) drop-shadow(0 0 100px rgba(255, 0, 0, 0.8));
+            }
+            60% { 
+                transform: translateY(-5px) scale(0.95);
+                filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.7)) drop-shadow(0 0 40px rgba(255, 0, 0, 0.4));
+            }
+        }
+
+        .warning-badge {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 2px solid #ff0000;
+            color: #ff0000;
+            font-size: 16px;
+            letter-spacing: 12px;
+            font-family: 'Courier New', monospace;
+            background: rgba(255, 0, 0, 0.05);
+            animation: badgeFlash 0.8s ease-in-out infinite;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+        }
+
+        @keyframes badgeFlash {
+            0%, 100% { 
+                background: rgba(255, 0, 0, 0.05);
+                box-shadow: 0 0 15px rgba(255, 0, 0, 0.3), inset 0 0 15px rgba(255, 0, 0, 0.1);
+            }
+            50% { 
+                background: rgba(255, 0, 0, 0.15);
+                box-shadow: 0 0 35px rgba(255, 0, 0, 0.6), inset 0 0 25px rgba(255, 0, 0, 0.2);
+            }
+        }
+
+        .main-title {
+            font-size: 58px;
+            color: #cc0000;
+            margin: 15px 0;
+            letter-spacing: 8px;
+            font-family: 'Arial Black', sans-serif;
+            text-shadow: 
+                0 0 20px rgba(255, 0, 0, 0.8),
+                0 0 40px rgba(255, 0, 0, 0.5),
+                0 0 80px rgba(255, 0, 0, 0.3);
+            animation: titleNightmare 4s infinite;
+            line-height: 1.3;
+        }
+
+        @keyframes titleNightmare {
+            0%, 85%, 100% { opacity: 1; transform: scale(1); }
+            86% { opacity: 0.3; transform: scale(1.05); }
+            87% { opacity: 1; transform: scale(0.95); }
+            88% { opacity: 0.6; transform: scale(1.02); }
+            89% { opacity: 1; transform: scale(1); }
+        }
+
+        .tracking-info {
+            font-size: 20px;
+            color: #888;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            letter-spacing: 3px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 12px 25px;
+            border: 1px solid #330000;
+            display: inline-block;
+            animation: trackingFade 3s infinite;
+        }
+
+        @keyframes trackingFade {
+            0%, 100% { opacity: 0.4; border-color: #330000; }
+            50% { opacity: 1; border-color: #660000; }
+        }
+
+        .tracking-info .blink-green {
+            color: #00ff00;
+            animation: greenBlink 0.5s step-end infinite;
+            text-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+        }
+
+        @keyframes greenBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.2; }
+        }
+
+        .access-denied {
+            font-size: 46px;
+            color: #ff0000;
+            margin: 20px 0;
+            font-family: 'Arial Black', sans-serif;
+            animation: deniedShake 0.2s ease-in-out infinite;
+            text-shadow: 
+                0 0 30px rgba(255, 0, 0, 0.9),
+                0 0 60px rgba(255, 0, 0, 0.6),
+                0 0 100px rgba(255, 0, 0, 0.4);
+            letter-spacing: 5px;
+            position: relative;
+        }
+
+        .access-denied::before {
+            content: '✦ تم رصد دخيل ✦';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            color: rgba(0, 0, 255, 0.5);
+            z-index: -1;
+            animation: deniedGhost 0.3s infinite;
+        }
+
+        @keyframes deniedShake {
+            0%, 100% { transform: translate(0, 0); }
+            15% { transform: translate(-4px, 2px); }
+            30% { transform: translate(4px, -2px); }
+            45% { transform: translate(-3px, -3px); }
+            60% { transform: translate(3px, 3px); }
+            75% { transform: translate(-2px, -1px); }
+            90% { transform: translate(2px, 1px); }
+        }
+
+        @keyframes deniedGhost {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(-3px, -1px); }
+            50% { transform: translate(3px, 1px); }
+            75% { transform: translate(-2px, 2px); }
+        }
+
+        .threat-panel {
+            margin: 25px 0;
+            padding: 20px;
+            border: 1px solid #440000;
+            background: rgba(255, 0, 0, 0.02);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .threat-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.05), transparent);
+            animation: threatScan 2s linear infinite;
+        }
+
+        @keyframes threatScan {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .threat-label {
+            font-size: 20px;
+            color: #ff3333;
+            letter-spacing: 6px;
+            font-family: 'Courier New', monospace;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+            animation: labelGlow 0.8s ease-in-out infinite alternate;
+        }
+
+        @keyframes labelGlow {
+            0% { text-shadow: 0 0 20px rgba(255, 0, 0, 0.7); color: #ff3333; }
+            100% { text-shadow: 0 0 40px rgba(255, 0, 0, 1), 0 0 80px rgba(255, 0, 0, 0.6); color: #ff0000; }
+        }
+
+        .threat-meter {
+            width: 100%;
+            height: 10px;
+            background: #0a0000;
+            margin-top: 15px;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            border: 1px solid #440000;
+        }
+
+        .threat-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #660000, #cc0000, #ff0000, #cc0000, #660000);
+            background-size: 300% 100%;
+            animation: fillDanger 1s ease-in-out infinite, fillMove 3s linear infinite;
+            border-radius: 4px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes fillDanger {
+            0%, 100% { width: 89%; }
+            30% { width: 94%; }
+            60% { width: 88%; }
+            85% { width: 96%; }
+        }
+
+        @keyframes fillMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
+        }
+
+        .alert-message {
+            margin: 15px 0;
+            padding: 15px;
+            border: 1px dashed #660000;
+            font-family: 'Courier New', monospace;
+            color: #ff4444;
+            font-size: 15px;
+            letter-spacing: 3px;
+            animation: alertPulse 2s infinite;
+            background: rgba(255, 0, 0, 0.03);
+        }
+
+        @keyframes alertPulse {
+            0%, 100% { 
+                opacity: 0.6; 
+                border-color: #440000;
+                box-shadow: none;
+            }
+            50% { 
+                opacity: 1; 
+                border-color: #990000;
+                box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+            }
+        }
+
+        .footer-seal {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 2px solid #220000;
+            font-size: 17px;
+            color: #550000;
+            letter-spacing: 6px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .footer-seal .blink-severe {
+            color: #ff0000;
+            animation: severeBlink 0.2s step-end infinite;
+            text-shadow: 0 0 25px rgba(255, 0, 0, 1), 0 0 50px rgba(255, 0, 0, 0.6);
+        }
+
+        @keyframes severeBlink {
+            0%, 100% { opacity: 1; }
+            30% { opacity: 0; }
+            60% { opacity: 1; }
+            80% { opacity: 0; }
+        }
+
+        .countdown {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #ff6666;
+            letter-spacing: 4px;
+            animation: countdownPulse 1s ease-in-out infinite;
+        }
+
+        @keyframes countdownPulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* رسالة طوارئ */
+        .emergency-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 20;
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
             opacity: 0;
-            visibility: hidden;
-            transition: 0.3s;
-            z-index: 99;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-        .scroll-top.show {
-            opacity: 1;
-            visibility: visible;
-        }
-        .scroll-top i {
-            color: black;
-            font-size: 1.6rem;
+            animation: emergencyFlash 15s infinite;
         }
 
-        @media (max-width: 768px) {
-            .section-header h2 { font-size: 2.5rem; }
-            .btn-master { padding: 14px 30px; font-size: 1rem; }
-            .testimonial-text { font-size: 1.1rem; }
-            .intro-luxury p { font-size: 1.2rem; }
+        .emergency-text {
+            font-size: 80px;
+            color: #ff0000;
+            font-family: 'Arial Black', sans-serif;
+            text-shadow: 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 120px #ff0000;
+            letter-spacing: 15px;
+        }
+
+        @keyframes emergencyFlash {
+            0%, 90%, 100% { opacity: 0; }
+            91% { opacity: 0.9; }
+            92% { opacity: 0; }
+            93% { opacity: 0.7; }
+            94% { opacity: 0; }
+            95% { opacity: 0.5; }
+            96% { opacity: 0; }
+        }
+
+        @media (max-width: 650px) {
+            .box {
+                padding: 20px 12px;
+            }
+            .main-title {
+                font-size: 22px;
+                letter-spacing: 3px;
+            }
+            .access-denied {
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+            .skull-icon {
+                font-size: 60px;
+            }
+            .warning-badge {
+                font-size: 10px;
+                letter-spacing: 6px;
+                padding: 8px 18px;
+            }
+            .tracking-info {
+                font-size: 11px;
+                padding: 8px 12px;
+                letter-spacing: 1px;
+            }
+            .threat-label {
+                font-size: 14px;
+                letter-spacing: 3px;
+            }
+            .footer-seal {
+                font-size: 12px;
+                letter-spacing: 3px;
+            }
+            .alert-message {
+                font-size: 10px;
+                padding: 10px;
+                letter-spacing: 1px;
+            }
+            .custom-cursor {
+                display: none;
+            }
+            body {
+                cursor: auto;
+            }
+            .emergency-text {
+                font-size: 30px;
+                letter-spacing: 8px;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="bg-aura"></div>
-<div class="gold-dust"></div>
+    <!-- ظلام دامس -->
+    <div class="darkness"></div>
 
-<!-- Hero Section -->
-<section class="hero" id="home">
-    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-        <div class="hero-subtitle">بِإشْرَاف المُعَلِّم أَبُو مُحَمَّد</div>
-        <h1>مَشَاغِل<br>الثِّقَة</h1>
-        <div class="hero-tag">إتقان أسطوري · حدادة · قرميد · ألمنيوم فاخر</div>
-    </div>
-</section>
+    <!-- عيون في الظلام -->
+    <div class="eyes-container" id="eyesContainer"></div>
 
-<!-- Intro عذب -->
-<section class="intro-luxury">
-    <div data-aos="fade-up">
-        <p class="serif-accent" style="font-size:1.7rem; font-weight:300;">” حيثُ تلتقي القوة بالفن، وتُصاغ الفخامة بإتقان لا يُضاهى “</p>
-        <div class="gold-separator"></div>
-        <p>أعمالنا تجسيدٌ للحلم المعماري الذي تستحقه. الحديد يتحول إلى لوحات، القرميد يحكي أسطورة الصمود، والألمنيوم يرقص على إيقاع الحداثة.</p>
-    </div>
-</section>
+    <!-- وميض الشاشة -->
+    <div class="screen-flicker"></div>
 
-<!-- Services Section متطورة -->
-<section class="services">
-    <div class="section-header" data-aos="fade-down">
-        <h2>خِبْراتنا المَلَكِية</h2>
-    </div>
-    <div class="cards-grid">
-        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card-icon"><i class="fas fa-dragon"></i></div>
-            <h3>الحدادة الملكية</h3>
-            <p>نشكّل الحديد بأسلوب فني راقٍ، درابزينات وبوابات ذات طابع قصور أوروبية وشرقية، قوة لا تلين وجمال يأسر الألباب.</p>
-        </div>
-        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
-            <div class="card-icon"><i class="fas fa-house-chimney"></i></div>
-            <h3>القرميد الفاخر</h3>
-            <p>أسقف تتحمل الزمن، عزل حراري ومائي مثالي، تشطيبات تحاكي جمال العصور. نوفر أجود أنواع القرميد الإسباني والإيطالي.</p>
-        </div>
-        <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
-            <div class="card-icon"><i class="fas fa-border-all"></i></div>
-            <h3>الألمنيوم العصري</h3>
-            <p>واجهات زجاجية، مطابخ عصرية، أنظمة شرائح إيطالية. خفة بصرية مع متانة خرافية، لمسة عصرية تليق برواد الأعمال.</p>
-        </div>
-    </div>
-</section>
+    <!-- خطوط المسح -->
+    <div class="scan-lines"></div>
 
-<!-- Showcase إحصائيات وثقة -->
-<section class="showcase">
-    <div class="section-header" data-aos="fade-up">
-        <h2>أرقام تُلهِم</h2>
+    <!-- رسالة طوارئ -->
+    <div class="emergency-overlay">
+        <div class="emergency-text">⚠️ اختراق ⚠️</div>
     </div>
-    <div class="showcase-grid">
-        <div class="showcase-item" data-aos="flip-left">
-            <i class="fas fa-trophy"></i>
-            <div class="stat-number">+500</div>
-            <p>مشروع مكتمل بفخامة</p>
-        </div>
-        <div class="showcase-item" data-aos="flip-left" data-aos-delay="100">
-            <i class="fas fa-user-tie"></i>
-            <div class="stat-number">20</div>
-            <p>سنة خبرة وريادة</p>
-        </div>
-        <div class="showcase-item" data-aos="flip-left" data-aos-delay="200">
-            <i class="fas fa-map-marked-alt"></i>
-            <div class="stat-number">3</div>
-            <p>فروع في المملكة</p>
-        </div>
-        <div class="showcase-item" data-aos="flip-left" data-aos-delay="300">
-            <i class="fas fa-gem"></i>
-            <div class="stat-number">100%</div>
-            <p>رضا عملاء فاخر</p>
+
+    <!-- Canvas للتأثيرات -->
+    <canvas id="horrorCanvas"></canvas>
+
+    <!-- مؤشر التصويب -->
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <div class="container" id="mainContainer">
+        <div class="box">
+            <div class="restricted-stamp">🚫</div>
+            
+            <div class="skull-container">
+                <span class="skull-icon">☠️</span>
+            </div>
+            
+            <div class="warning-badge">
+                !!! اختراق !!!
+            </div>
+
+            <h1 class="main-title">
+                ARBIX SECURITY
+            </h1>
+
+            <div class="tracking-info">
+                <span class="blink-green">◉</span> تتبع الموقع... 
+                <span class="blink-green" id="ipDisplay">192.168.</span><span style="color:#ff0000">***</span>
+            </div>
+
+            <div class="access-denied">
+                ✦ تم رصد دخيل ✦
+            </div>
+
+            <div class="threat-panel">
+                <div class="threat-label">⚠ مستوى التهديد: مميت ⚠</div>
+                <div class="threat-meter">
+                    <div class="threat-fill"></div>
+                </div>
+            </div>
+
+            <div class="alert-message">
+                ⛔ محاولة اختراق مكتشفة ⛔<br>
+                <span style="font-size: 13px; color: #ff6666;">جاري الردع والتدمير...</span>
+            </div>
+
+            <div class="footer-seal">
+                <span class="blink-severe">⬤</span> أربكس : الصقر الإلكتروني <span class="blink-severe">⬤</span><br>
+                <div class="countdown">
+                    ⚡ الاقتراب = فناء محقق ⚡
+                </div>
+            </div>
         </div>
     </div>
-</section>
 
-<!-- Testimonial راقية -->
-<section class="testimonial">
-    <div class="testimonial-card" data-aos="flip-up">
-        <i class="fas fa-quote-right"></i>
-        <div class="testimonial-text serif-accent">
-            “ تعاملت مع المعلم أبو محمد في تشطيب قصر العائلة، الخامة والدقة والإبداع فاق توقعاتي. حرفية قلما تجدها في أي مكان آخر ”
-        </div>
-        <h4 style="color: var(--gold-primary);">- الشيخ خالد الحارثي</h4>
-        <p style="color:#888;">أحد كبار عملائنا</p>
-    </div>
-</section>
+    <script>
+        // =============== نظام الصوت المتقدم ===============
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        let audioCtx;
+        let horrorInterval;
 
-<!-- Contact Area ذهبي مع تحسينات فائقة -->
-<section class="contact-luxury">
-    <div class="contact-glow" data-aos="fade-up">
-        <h3>لِنُحَوِّل رؤيتك إلى <span style="color: var(--gold-primary);">تحفة خالدة</span></h3>
-        <div class="contact-desc">تواصل مباشرة مع المعلم أبو محمد على واتساب أو فيسبوك واحصل على استشارة فورية وخيارات تناسب ذوقك الرفيع.</div>
-        <div class="btn-group-lux">
-            <a href="https://wa.me/962772158245" class="btn-master btn-whatsapp-gold" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-whatsapp"></i> واتساب VIP
-            </a>
-            <a href="https://facebook.com/your-page" class="btn-master btn-facebook-gold" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-facebook-f"></i> فيسبوك الرسمي
-            </a>
-        </div>
-        <p style="margin-top: 40px; font-size: 0.9rem; color: #7a7a7a;">متوفر خدمة العملاء 24/7 — الرد خلال دقائق</p>
-    </div>
-</section>
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new AudioContext();
+                startAmbientHorror();
+            }
+        }
 
-<!-- Footer محسن -->
-<footer>
-    <div class="footer-brand">مشاغل الثقة <span style="color: #fff;">AL-THIQAH</span></div>
-    <div class="footer-links">
-        <a href="#home">الرئيسية</a>
-        <a href="#services-btn" id="servicesBtn">خدماتنا</a>
-        <a href="#contact">تواصل</a>
-        <a href="#">ضمان الجودة</a>
-    </div>
-    <p style="color: #4a4a4a; margin-top: 20px;">جميع الحقوق محفوظة © 2026 | حماية وتطوير <span style="color: var(--gold-primary);">أبو ناقوس</span></p>
-    <p style="color: #2e2e2e; font-size: 0.75rem;">الفخامة التي تستحقها — قوة وإبداع بلا منازع</p>
-</footer>
-
-<div class="scroll-top" id="scrollTopBtn">
-    <i class="fas fa-arrow-up"></i>
-</div>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    // AOS initialization (تحريك أنيق)
-    AOS.init({
-        duration: 800,
-        once: true,
-        offset: 100,
-        easing: 'ease-in-out'
-    });
-
-    // سموث سكرول للروابط (اختياري)
-    document.querySelectorAll('.footer-links a, #servicesBtn').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if(href && href.startsWith('#')) {
-                e.preventDefault();
-                const targetId = href.substring(1);
-                let targetElement = null;
-                if(targetId === 'services-btn') {
-                    targetElement = document.querySelector('.services');
-                } else if(targetId === 'contact') {
-                    targetElement = document.querySelector('.contact-luxury');
-                } else if(targetId === 'home') {
-                    targetElement = document.querySelector('.hero');
-                } else {
-                    targetElement = document.getElementById(targetId);
+        function playSound(freq, type = 'sawtooth', duration = 0.3, vol = 0.12, rampDown = true) {
+            if (!audioCtx) return;
+            try {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                const filter = audioCtx.createBiquadFilter();
+                
+                osc.connect(filter);
+                filter.connect(gain);
+                gain.connect(audioCtx.destination);
+                
+                osc.type = type;
+                filter.type = 'lowpass';
+                filter.frequency.setValueAtTime(1000, audioCtx.currentTime);
+                filter.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + duration);
+                
+                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+                if (rampDown) {
+                    osc.frequency.exponentialRampToValueAtTime(freq * 0.3, audioCtx.currentTime + duration);
                 }
-                if(targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                gain.gain.setValueAtTime(vol, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+                
+                osc.start(audioCtx.currentTime);
+                osc.stop(audioCtx.currentTime + duration);
+            } catch(e) {}
+        }
+
+        function playHeartbeat() {
+            if (!audioCtx) return;
+            const now = audioCtx.currentTime;
+            for (let i = 0; i < 3; i++) {
+                playSound(40, 'sine', 0.15, 0.25, false);
+            }
+        }
+
+        function playScream() {
+            if (!audioCtx) return;
+            const now = audioCtx.currentTime;
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    playSound(200 + Math.random() * 300, 'sawtooth', 0.2, 0.08);
+                }, i * 100);
+            }
+        }
+
+        function startAmbientHorror() {
+            if (horrorInterval) clearInterval(horrorInterval);
+            horrorInterval = setInterval(() => {
+                if (Math.random() > 0.5) {
+                    playSound(30 + Math.random() * 50, 'sine', 0.5, 0.04);
                 }
+            }, 3000);
+        }
+
+        // =============== إنشاء العيون ===============
+        function createEyes() {
+            const container = document.getElementById('eyesContainer');
+            const positions = [
+                { top: '15%', left: '10%', delay: '0s' },
+                { top: '20%', left: '80%', delay: '1s' },
+                { top: '60%', left: '5%', delay: '2s' },
+                { top: '70%', left: '85%', delay: '3s' },
+                { top: '40%', left: '90%', delay: '1.5s' },
+                { top: '80%', left: '15%', delay: '2.5s' },
+                { top: '10%', left: '50%', delay: '0.5s' },
+                { top: '50%', left: '2%', delay: '3.5s' },
+            ];
+
+            positions.forEach(pos => {
+                const pair = document.createElement('div');
+                pair.className = 'eye-pair';
+                pair.style.top = pos.top;
+                pair.style.left = pos.left;
+                pair.style.animationDelay = pos.delay;
+                pair.innerHTML = '<span class="eye"></span><span class="eye"></span>';
+                container.appendChild(pair);
+            });
+        }
+
+        createEyes();
+
+        // =============== Canvas للدم والجزيئات ===============
+        const canvas = document.getElementById('horrorCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        const maxParticles = 150;
+
+        function createParticle(x, y) {
+            return {
+                x: x || Math.random() * canvas.width,
+                y: y || Math.random() * canvas.height,
+                size: Math.random() * 5 + 1,
+                speedX: (Math.random() - 0.5) * 1.2,
+                speedY: (Math.random() - 0.5) * 1.2,
+                life: 1,
+                decay: Math.random() * 0.004 + 0.001,
+                color: Math.random() > 0.5 ? '#ff0000' : '#8b0000'
+            };
+        }
+
+        for (let i = 0; i < maxParticles; i++) {
+            particles.push(createParticle());
+        }
+
+        // نص مخفي يظهر في الخلفية
+        const hiddenTexts = [
+            'أنت مراقب', 'لا تهرب', 'لن تنجو', 'استسلم', 'النهاية قريبة',
+            'تم اختراقك', 'عد للخلف', 'ممنوع الدخول', 'خطر', 'فخ'
+        ];
+        
+        function drawCanvas() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // رسم الجزيئات
+            particles.forEach((p, i) => {
+                const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size * 4);
+                gradient.addColorStop(0, `rgba(255, 0, 0, ${p.life * 0.5})`);
+                gradient.addColorStop(1, 'rgba(255, 0, 0, 0)');
+                
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size * 4, 0, Math.PI * 2);
+                ctx.fillStyle = gradient;
+                ctx.fill();
+                
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${p.color === '#ff0000' ? '255,0,0' : '139,0,0'}, ${p.life * 0.9})`;
+                ctx.fill();
+
+                p.x += p.speedX + Math.sin(Date.now() * 0.002 + i) * 0.4;
+                p.y += p.speedY + Math.cos(Date.now() * 0.002 + i) * 0.4;
+                p.life -= p.decay;
+
+                if (p.life <= 0) {
+                    particles[i] = createParticle();
+                    particles[i].life = 1;
+                }
+
+                if (p.x < -50) p.x = canvas.width + 50;
+                if (p.x > canvas.width + 50) p.x = -50;
+                if (p.y < -50) p.y = canvas.height + 50;
+                if (p.y > canvas.height + 50) p.y = -50;
+            });
+
+            // نصوص مخفية تظهر
+            if (Math.random() > 0.97) {
+                const text = hiddenTexts[Math.floor(Math.random() * hiddenTexts.length)];
+                ctx.font = `${Math.random() * 40 + 20}px 'Arial Black'`;
+                ctx.fillStyle = `rgba(255, 0, 0, ${Math.random() * 0.08 + 0.02})`;
+                ctx.fillText(text, Math.random() * canvas.width, Math.random() * canvas.height);
+            }
+
+            requestAnimationFrame(drawCanvas);
+        }
+
+        drawCanvas();
+
+        // =============== مؤشر مخصص ===============
+        const cursor = document.getElementById('customCursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            // العيون تتبع الماوس
+            document.querySelectorAll('.eye').forEach(eye => {
+                const rect = eye.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                const angle = Math.atan2(e.clientY - centerY, e.clientX - centerX);
+                const pupil = eye.querySelector('::after');
+            });
+        });
+
+        // =============== تأثير النقر المتطور ===============
+        document.addEventListener('click', function(e) {
+            initAudio();
+            playSound(80, 'sawtooth', 0.25, 0.15);
+            setTimeout(() => playSound(60, 'square', 0.3, 0.1), 200);
+            setTimeout(() => playScream(), 400);
+
+            // اهتزاز عنيف
+            const container = document.getElementById('mainContainer');
+            container.style.animation = 'none';
+            container.offsetHeight;
+            container.style.animation = 'containerGlitch 1s infinite';
+
+            // وميض
+            const flash = document.createElement('div');
+            flash.style.cssText = `
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(255, 0, 0, 0.2); pointer-events: none; z-index: 9999;
+                animation: megaFlash 0.4s ease-out forwards;
+            `;
+            document.body.appendChild(flash);
+            setTimeout(() => flash.remove(), 400);
+
+            // حلقة صدمة
+            const ring = document.createElement('div');
+            ring.style.cssText = `
+                position: fixed; top: ${e.clientY - 60}px; left: ${e.clientX - 60}px;
+                width: 120px; height: 120px; border-radius: 50%;
+                border: 3px solid rgba(255, 0, 0, 0.9); pointer-events: none; z-index: 9999;
+                animation: shockRing 0.7s ease-out forwards;
+                box-shadow: 0 0 30px rgba(255, 0, 0, 0.6), inset 0 0 30px rgba(255, 0, 0, 0.3);
+            `;
+            document.body.appendChild(ring);
+            setTimeout(() => ring.remove(), 700);
+
+            // جزيئات دموية كثيفة
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                const angle = (Math.PI * 2 * i) / 20;
+                const distance = Math.random() * 100 + 50;
+                
+                particle.style.cssText = `
+                    position: fixed; top: ${e.clientY}px; left: ${e.clientX}px;
+                    width: ${Math.random() * 6 + 2}px; height: ${Math.random() * 6 + 2}px;
+                    background: #ff0000; border-radius: 50%; pointer-events: none; z-index: 9999;
+                    box-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000;
+                    animation: bloodExplode 0.9s ease-out forwards;
+                    --tx: ${Math.cos(angle) * distance}px;
+                    --ty: ${Math.sin(angle) * distance}px;
+                `;
+                document.body.appendChild(particle);
+                setTimeout(() => particle.remove(), 900);
+            }
+
+            // إضافة جزيئات للـCanvas
+            for (let i = 0; i < 15; i++) {
+                particles.push(createParticle(e.clientX, e.clientY));
+            }
+            if (particles.length > maxParticles + 60) {
+                particles.splice(maxParticles, particles.length - maxParticles);
             }
         });
-    });
 
-    // زر السهم لأعلى مع تحسين الظهور
-    const scrollBtn = document.getElementById('scrollTopBtn');
-    window.addEventListener('scroll', () => {
-        if(window.scrollY > 500) {
-            scrollBtn.classList.add('show');
-        } else {
-            scrollBtn.classList.remove('show');
+        // =============== إضافة الأنيميشنات ديناميكياً ===============
+        const styleEl = document.createElement('style');
+        styleEl.textContent = `
+            @keyframes megaFlash {
+                0% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            @keyframes shockRing {
+                0% { transform: scale(0); opacity: 1; }
+                100% { transform: scale(4); opacity: 0; }
+            }
+            @keyframes bloodExplode {
+                0% { opacity: 1; transform: translate(0, 0) scale(1); }
+                100% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(0); }
+            }
+        `;
+        document.head.appendChild(styleEl);
+
+        // =============== تحديث IP وهمي ===============
+        function generateFakeIP() {
+            return `${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}`;
         }
-    });
-    scrollBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
 
-    // تأثير بارالاكس متطور للهيدر - تحسين لمسة التصميم
-    const hero = document.querySelector('.hero');
-    if(hero) {
-        window.addEventListener('mousemove', (e) => {
-            const xAxis = (window.innerWidth / 2 - e.pageX) / 45;
-            const yAxis = (window.innerHeight / 2 - e.pageY) / 45;
-            hero.style.backgroundPosition = `calc(50% + ${xAxis}px) calc(50% + ${yAxis}px)`;
+        function updateIP() {
+            const display = document.getElementById('ipDisplay');
+            if (display) {
+                const ip = generateFakeIP();
+                display.innerHTML = `◉ IP: ${ip.substring(0, ip.lastIndexOf('.'))}.<span style="color:#ff0000">***</span>`;
+            }
+        }
+
+        setInterval(updateIP, 4000);
+        updateIP();
+
+        // =============== منع أدوات المطور ===============
+        document.addEventListener('keydown', function(e) {
+            initAudio();
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.key === 'U') || (e.ctrlKey && e.key === 'S')) {
+                e.preventDefault();
+                playSound(250, 'square', 0.5, 0.2);
+                playScream();
+                
+                const flash = document.createElement('div');
+                flash.style.cssText = `
+                    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                    background: rgba(255, 0, 0, 0.35); pointer-events: none; z-index: 99999;
+                    animation: megaFlash 0.5s ease-out forwards;
+                `;
+                document.body.appendChild(flash);
+                setTimeout(() => flash.remove(), 500);
+                
+                alert('⚠️⚠️⚠️ تحذير أمني شديد ⚠️⚠️⚠️\n\nتم رصد محاولة فتح أدوات المطور!\n\nسيتم اتخاذ إجراءات صارمة ضدك.');
+                return false;
+            }
         });
-    }
 
-    // إضافة تأثير ذهبي عند النقر على الأزرار 
-    const btns = document.querySelectorAll('.btn-master');
-    btns.forEach(btn => {
-        btn.addEventListener('click', function(e){
-            let ripple = document.createElement('span');
-            ripple.classList.add('ripple-effect');
-            ripple.style.position = 'absolute';
-            ripple.style.backgroundColor = 'rgba(255,215,0,0.5)';
-            ripple.style.borderRadius = '50%';
-            ripple.style.transform = 'scale(0)';
-            ripple.style.animation = 'rippleAnim 0.6s linear';
-            const rect = btn.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            ripple.style.width = ripple.style.height = `${size}px`;
-            const x = e.clientX - rect.left - size/2;
-            const y = e.clientY - rect.top - size/2;
-            ripple.style.left = `${x}px`;
-            ripple.style.top = `${y}px`;
-            ripple.style.pointerEvents = 'none';
-            btn.style.position = 'relative';
-            btn.style.overflow = 'hidden';
-            btn.appendChild(ripple);
-            setTimeout(() => ripple.remove(), 600);
+        // =============== منع الزر الأيمن ===============
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            initAudio();
+            playSound(180, 'square', 0.35, 0.18);
+            playHeartbeat();
         });
-    });
-    const styleSheet = document.createElement("style");
-    styleSheet.textContent = `
-        @keyframes rippleAnim {
-            from { transform: scale(0); opacity: 0.7; }
-            to { transform: scale(4); opacity: 0; }
-        }
-        .btn-master {
-            overflow: hidden;
-            position: relative;
-        }
-    `;
-    document.head.appendChild(styleSheet);
 
-    // إضافة حماية بسيطة للروابط (فتح الواتس والفيس بوك في نافذة جديدة)
-    const waLink = document.querySelector('a[href*="wa.me"]');
-    const fbLink = document.querySelector('a[href*="facebook.com"]');
-    if(waLink) waLink.setAttribute('target', '_blank');
-    if(fbLink) fbLink.setAttribute('target', '_blank');
-    
-    // تحسين تجربة المستخدم: منع الأخطاء الكونسول لأي صور غير موجودة
-    console.log("%cمشاغل الثقة - الفخامة المطلقة", "color: #D4AF37; font-size: 20px; font-weight: bold;");
-</script>
+        // =============== تأثير التمرير ===============
+        document.addEventListener('wheel', function() {
+            initAudio();
+            if (Math.random() > 0.6) playSound(40 + Math.random() * 60, 'sawtooth', 0.2, 0.06);
+        });
+
+        // =============== نبضات قلب ===============
+        setInterval(() => {
+            if (Math.random() > 0.4) {
+                initAudio();
+                playHeartbeat();
+            }
+        }, 7000);
+
+        // =============== كشف المتصفح ===============
+        function getInfo() {
+            const ua = navigator.userAgent;
+            let browser = 'مجهول', os = 'مجهول';
+            if (ua.includes('Chrome')) browser = 'Google Chrome';
+            else if (ua.includes('Firefox')) browser = 'Firefox';
+            else if (ua.includes('Safari')) browser = 'Safari';
+            else if (ua.includes('Edge')) browser = 'Edge';
+            
+            if (ua.includes('Windows')) os = 'Windows';
+            else if (ua.includes('Mac')) os = 'macOS';
+            else if (ua.includes('Linux')) os = 'Linux';
+            else if (ua.includes('Android')) os = 'Android';
+            else if (ua.includes('iPhone')) os = 'iOS';
+            
+            return { browser, os };
+        }
+
+        // =============== رسائل الكونسول ===============
+        const info = getInfo();
+        console.log('%c💀💀💀 ARBIX SECURITY SYSTEM 💀💀💀', 'color: #ff0000; font-size: 50px; font-weight: bold;');
+        console.log('%c⚠️ أنت في منطقة محظورة ⚠️', 'color: #ff0000; font-size: 22px;');
+        console.log(`%c🖥️ ${info.browser} | 💻 ${info.os}`, 'color: #ff6600; font-size: 15px;');
+        console.log(`%c🌐 IP: ${generateFakeIP()}`, 'color: #00ff00; font-size: 14px;');
+        console.log('%c👁️ أنت تحت المراقبة الكاملة 👁️', 'color: #ff0000; font-size: 18px;');
+        console.log('%c⛔ الاختراق = تدمير فوري ⛔', 'color: #ff0000; font-size: 28px; font-weight: bold;');
+        console.log('%c🦅 أربكس: الصقر الإلكتروني 🦅', 'color: #cc0000; font-size: 17px;');
+        console.log('%cلا تحاول الهروب...', 'color: #660000; font-size: 13px;');
+
+        // =============== تحميل ===============
+        window.addEventListener('load', () => {
+            initAudio();
+            setTimeout(() => playSound(50, 'sawtooth', 0.6, 0.1), 300);
+            setTimeout(() => playHeartbeat(), 1000);
+            console.log('%cتم التحميل... جاري المسح...', 'color: #00ff00;');
+            console.log('%cتم رصد تهديد!', 'color: #ff0000; font-size: 16px;');
+        });
+
+        // =============== تحذير مغادرة ===============
+        window.addEventListener('beforeunload', () => {
+            initAudio();
+            playSound(120, 'square', 0.4, 0.15);
+            playScream();
+        });
+
+        // =============== تغيير حجم ===============
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
 </body>
 </html>
